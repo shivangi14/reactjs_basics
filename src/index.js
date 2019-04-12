@@ -1,7 +1,23 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
+function MyInfo(){
+  return(
+    <div>
+    <h1>Shivangi Agarwal</h1>
+    <p>Tech enthusiast</p>
+    <ol>
+      <li>andaman and nicobar</li>
+      <li>assam</li>
+      <li>himalayas</li>
+    </ol>
+    </div>
+  )
+}
 
+ReactDOM.render(<MyInfo />,document.getElementById("root"))
+
+/*
 function MyApp(){
     return (
     <ul>
@@ -16,6 +32,7 @@ ReactDOM.render(
     document.getElementById("root")
     )
 
+*/
 
 
 /*
