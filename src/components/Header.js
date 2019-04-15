@@ -1,14 +1,18 @@
 import React from "react"
 
 function Header(){
+    const date = new Date()
+    const hours = date.getHours()
+    let timeOfDay
+    if(hours<12)
+        timeOfDay = "Morning"
+    else if (hours >=12 && hours<16)
+        timeOfDay = "Afternoon"
+    else
+        timeOfDay = "Evening"
     return (
         <header>
-            <h1>Hello!!</h1>
-            <ul>
-                <li>Hi</li>
-                <li>Namaste</li>
-                <li>voila</li>
-            </ul>
+            <h1>Hello. Good {timeOfDay}!</h1>
         </header>
     )
 }
