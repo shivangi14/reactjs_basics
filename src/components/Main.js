@@ -5,22 +5,13 @@ import Joke from "./Joke"
 import jokesData from "./jokesData"
 
 function Main(){
+    const jokesComponents = jokesData.map(joke => {
+        return <Joke key={joke.id} question={joke.question} punchline={joke.punchline} />
+    })
     return(
         <main>
             <MyInfo />
-            <Joke
-                punchLine="It’s hard to explain puns to kleptomaniacs because they always take things literally."
-            />
-
-            <Joke
-                question="What's the best thing about Switzerland?"
-                punchLine="I don't know, but the flag is a big plus!"
-            />
-
-             <Joke
-                 question="Did you hear about the mathematician who's afraid of negative numbers?"
-                 punchLine="He'll stop at nothing to avoid them!"
-             />
+            {jokesComponents}
         </main>
     )
 }
