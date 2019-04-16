@@ -6,7 +6,11 @@ import jokesData from "./jokesData"
 
 function Main(){
     const jokesComponents = jokesData.map(joke => {
-        return <Joke key={joke.id} question={joke.question} punchline={joke.punchline} />
+        const data = <div key={joke.id}>
+                        <Joke question={joke.question} punchLine={joke.punchLine} />
+                        <p>next...</p>
+                     </div>
+        return data
     })
     return(
         <main>

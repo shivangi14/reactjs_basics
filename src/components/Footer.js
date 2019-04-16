@@ -1,9 +1,9 @@
 import React from "react"
 
 function Footer(){
+    const firstName = "Shivangi"
+    const lastName = "Agarwal"
     return(
-        const firstName = "Shivangi"
-        const lastName = "Agarwal"
         <footer>Made by {firstName + " " + lastName}</footer>
     )
 }
