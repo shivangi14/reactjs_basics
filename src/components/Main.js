@@ -5,6 +5,19 @@ import Joke from "./Joke"
 import jokesData from "./jokesData"
 
 class Main extends Component{
+    constructor(){
+        super()
+        this.state = {isLoading : true  }
+    }
+
+    componentDidMount(){
+        setTimeout(()=>{
+            this.setState(
+                {isLoading :false}
+            )
+        },2000)
+    }
+
     mapJokes(){
         const jokesComponents = jokesData.map(joke => {
                 const data = <div key={joke.id}>
@@ -18,10 +31,12 @@ class Main extends Component{
 
     render(){
         let mappedJokes = this.mapJokes()
+        let newJokes = []
         return(
                 <main>
                     <MyInfo />
-                    {mappedJokes}
+                    {this.state.isLoading? <h2>Wait! Loading Laughter...</h2> : mappedJokes}
+                    {newJokes.length > 0 && <h3>You have {newJokes.length} new jokes! </h3>}
                 </main>
             )
     }
