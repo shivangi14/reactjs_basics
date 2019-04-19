@@ -3,6 +3,7 @@ import React,{Component} from "react"
 import MyInfo from "./MyInfo"
 import Joke from "./Joke"
 import jokesData from "./jokesData"
+import Form from "./Form"
 
 class Main extends Component{
     constructor(){
@@ -35,6 +36,7 @@ class Main extends Component{
         return(
                 <main>
                     <MyInfo />
+                    <Form />
                     {this.state.isLoading? <h2>Wait! Loading Laughter...</h2> : mappedJokes}
                     {newJokes.length > 0 && <h3>You have {newJokes.length} new jokes! </h3>}
                 </main>
